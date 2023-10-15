@@ -1,0 +1,41 @@
+.root{
+    background-color: red;
+    width: 200px;
+    height: 200px;
+    margin-left: calc(50% - 100px);
+    margin-top: 200px;
+    position: relative;
+    cursor: pointer;
+  
+    
+}
+.root::before{
+    content: "";
+    width: 0px;
+    height: 0px;  
+    position: absolute;
+    bottom: -26px;
+    left: 70px;
+    transition: 0.5s;
+    border-top: solid red 30px;
+    border-left: solid transparent 30px;
+    border-right: solid transparent 30px;
+    border-bottom: solid transparent 30px;
+    transition: 0.5s;
+   
+}
+.root:hover::before{  
+    bottom: -57px;  
+    border-top: solid aqua 30px;
+    border-left: solid transparent 30px;
+    border-right: solid transparent 30px;
+    border-bottom: solid transparent 30px;
+    font-family: sans-serif;
+   
+
+}
+.root:hover{
+ background-color: aqua;
+ border-radius: 20px;
+
+}

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="" id="todo-form" >
+        <input type="text" id="todo-item" placeholder="Tarea Por Hacer">
+        <input type="submit" value="Agregar">
+    </form>
+    <h2>Lista de Tareas</h2>
+    <ul id="todo-list"></ul>
+    <script>
+        const d=document;
+        const $item = d.getElementById("todo-item");
+        const $list = d.getElementById("todo-list")
+
+        d.addEventListener("submit",e=>{
+
+            if(e.target.matches("#todo-form")){
+                e.preventDefault();
+                //Agragar Item a la Lista
+
+                let $li=d.createElement("li");
+                $li.textContent=$item.value;
+                $list.appendChild($li)
+                //Limpiamos
+                $item.value="";
+                $item.focus()
+
+            }
+        })
+    </script>
+</body>
+</html>
+
+//160

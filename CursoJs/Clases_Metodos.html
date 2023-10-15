@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <script>
+      class Animal {
+        constructor(nombre, genero) {
+          this.nombre = nombre;
+          this.genero = genero;
+        }
+        Sonar(){
+            console.log("Hago Sonido");
+        }
+        Saludar(){
+            console.log("Puedo Saludar ")
+        }
+      }
+//Heredando de Otra Clase
+class Perro extends Animal{
+constructor(nombre,genero,tamanio){
+  super(nombre,genero)
+  this.tamanio
+}
+Sonar(){
+  console.log("Soy un Perro y hago sonido")
+}
+Ladras(){
+  console.log("Guauu Guauu")
+}
+
+}
+
+const mini = new Animal("Mini", "Hembra");
+console.log(`Me llamo ${mini.nombre} y soy ${mini.genero}`);
+mini.Sonar();
+mini.Saludar();
+
+const perro = new Animal("Perro", "Macho","Grande");
+console.log(`Me llamo ${perro.nombre} y soy ${perro.genero}`);
+perro.Sonar();
+perro.Saludar();
+
+const perroSiguiente =new Perro("Perrote","Macho","Grandote");
+console.log(`Me llamo ${perroSiguiente.nombre} y soy ${perroSiguiente.genero}`);
+perroSiguiente.Sonar();
+perroSiguiente.Saludar();
+   
+    </script>
+  </body>
+</html>

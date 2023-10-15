@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sitio con Ajax</title>
+    <style>
+      html {
+        box-sizing: border-box;
+        font-family: sans-serif;
+        font-size: 16px;
+      }
+
+      *,
+      *:before,
+      *:after {
+        box-sizing: inherit;
+      }
+
+      body {
+        margin: 0;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+      }
+
+      img {
+        max-width: 100%;
+        height: auto;
+      }
+
+      main {
+        flex-grow: 1;
+      }
+
+      .conyeiner {
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 992px;
+      }
+
+      .header {
+        padding: 5rem;
+        background-color: antiquewhite;
+      }
+
+      .header-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .logo img {
+        width: 3rem;
+        height: auto;
+      }
+
+      .menu {
+        display: flex;
+        justify-content: space-between;
+        font-size: 115%;
+      }
+
+      .menu a {
+        color: chocolate;
+        padding: 0 1vw;
+        transition: all 0.3s ease-in-out;
+      }
+
+      .menu a:hover {
+        opacity: 0.75;
+      }
+    </style>
+  </head>
+
+  <body>
+ <div data-include="assets/header.html"></div>
+ <main class="conteiner">asasa</main>
+ <div data-include="assets/footer.html">ssss</div>
+   
+    <script>
+        const d = document;
+        const $main = d.querySelector("main");
+
+        //Funcion AJAX SOLICITANTE
+        const getInclude = async (options) =>{
+            try {
+                let{url,succes,err} = options;
+
+                let res = await fetch(url);
+                let data = await res.text();
+                if(!res.ok) throw { status: res.status, statusText: res.statusText };
+                succes(data);
+            } catch (err) {
+                let mensaje = err.statusText || "Ocurrio un Error: ";
+                $main.textContent = `Error: ${err.status}:${mensaje}`;
+            }
+
+        };
+        const getHTML = async (options) => {
+            try {
+        let{url,succes,err}=options
+              
+          let res = await fetch(url);        
+          let data = await res.text();     
+          if (!res.ok) throw { status: res.status, statusText: res.statusText };
+          succes(data)
+        } catch (err) {
+          let mensaje = err.statusText || "Ocurrio un Error: ";
+          $main.textContent = `Error: ${err.status}:${mensaje}`;
+        }
+      };
+
+
+        d.addEventListener("DOMContentLoaded", e => {
+          getHTML({
+              url:"assets/home.html",
+              succes: (res) => { $main.innerHTML = res }
+          })
+          let arinclude= d.querySelectorAll("[data-include]");
+          arinclude.forEach(el=>{
+            getInclude({
+                url:el.getAttribute("data-include"),
+                succes: resp => { el.outerHTML = resp },
+                error: err => { $el.innerHTML = `<h1>${err.status}</h1>` }
+            })
+
+          })
+
+         
+        })
+ d.addEventListener("click", e=>{
+            if(e.target.matches(".menu a")){
+                e.preventDefault()
+                getHTML({
+                url:`${e.target.href}`,
+                succes: (res) => { $main.innerHTML = res },
+                error: err => { $main.innerHTML = `<h1>${err.status}</h1>` }
+            })
+
+            }
+        }); 
+    </script>
+  </body>
+</html>
