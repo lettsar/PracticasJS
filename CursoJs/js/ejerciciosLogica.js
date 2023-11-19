@@ -11,7 +11,8 @@ export const RecortarText = (cadena="",longitud=undefined) => {
 if(!cadena){
     console.warn("Debe Colocar un Texto")
 }else if(longitud===undefined){
-    longitud=3;
+    longitud = 4;
+ /*    console.log("Debes Colocar un Texto") */
 }else{
     console.log(cadena.slice(0,longitud));
 
