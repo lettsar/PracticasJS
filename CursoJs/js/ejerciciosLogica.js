@@ -8,5 +8,9 @@ export const RecibeCadena = (cadena ="") =>{
     }
 }
 export const RecortarText = (cadena="",longitud=undefined) => {
-//35
+if(!cadena){
+    console.warn("No Ingresastes el Texto")
+}else{
+    console.log(cadena.slice(0,longitud))
+}
 }
