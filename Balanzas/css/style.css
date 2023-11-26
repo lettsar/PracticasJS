@@ -62,8 +62,7 @@ body{
 .grid-fluid{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
-    grid-gap: 15px;
-    text-align: center;
+    grid-gap: 15px;    
     text-align: justify;
 }
 .cont-logo{
@@ -89,7 +88,7 @@ body{
 }
 .main {   
     background-color: var(--bg-nieve);    
-    flex-grow: 1;
+    flex-grow: 1; 
     
   }
   .main-cont{
@@ -100,7 +99,7 @@ body{
   }
   .main-botton{
     display: grid;
-    gap:0px 10px;
+    gap:10px 10px;
     grid-template-columns: 30% 70%;
     grid-template-rows: 20% auto;
     grid-template-areas: "logo titulo"
@@ -141,7 +140,7 @@ body{
     font-weight: bold;
 }
   footer,header{
-    padding: 1rem 1rem 0 1rem;
+    padding: 1rem 1rem 1rem 1rem;
     background-color: var(--bg-header);
   }
 
