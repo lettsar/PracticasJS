@@ -9,15 +9,12 @@ export const RecibeCadena = (cadena ="") =>{
 }
 export const RecortarText = (cadena="",longitud=undefined) => {
 if(!cadena){
-    console.warn("Debe Colocar un Texto")
-}else if(longitud===undefined){
-   
- console.log("Debes Colocar un Texto")
+    console.warn("No Ingresastes el Texto")
 }else{
-    console.log(cadena.slice(0,longitud));
+    console.log(cadena.slice(0,longitud))
+}
+}
 
-}
-}
 export const ConvArray = (cadena="",caracter=undefined) => {
 (!cadena)?console.warn("Debes Colocar una Cadena")
          :(caracter===undefined)
@@ -36,4 +33,5 @@ export const RepetirVeces =(texto="",veces=undefined)=>{
     } 
     console.log(`Se imprime "${texto}" la Cantidad Solicitada de ${veces}`)
 }
-cons
+
+
