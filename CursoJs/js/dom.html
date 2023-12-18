@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WEB APIs</title>
+  <style>
+    :root {
+      --yellow-color: #F7DF1E;
+      --dark-color: #222;
+    }
+
+    .cards {
+      border: thin solid var(--dark-color);
+      padding: 1rem;
+    }
+
+    .card {
+      display: inline-block;
+      background-color: var(--dark-color);
+      color: var(--yellow-color);
+    }
+
+    .card figcaption {
+      padding: 1rem;
+    }
+
+    .rotate-45 {
+      transform: rotate(45deg);
+    }
+
+    .rotate-135 {
+      transform: rotate(135deg);
+    }
+
+    .opacity-80 {
+      opacity: .8;
+    }
+
+    .sepia {
+      filter: sepia(1);
+    }
+
+    .eventos-flujo div {
+      padding: 4rem;
+      font-size: 2rem;
+      text-align: center;
+    }
+
+    .uno {
+      background-color: yellow;
+    }
+
+    .dos {
+      background-color: gold;
+    }
+
+    .tres {
+      background-color: lightyellow;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>WEB APIs</h1>
+  <h2>DOM: Document Object Model</h2>
+  <h2>BOM: Browser Object Model</h2>
+  <h2>CSSOM: CSS Object Model</h2>
+  <h2>WEB APIs</h2>
+  <ul>
+    <li>Eventos</li>
+    <li>Forms</li>
+    <li>AJAX - Fetch</li>
+    <li>History</li>
+    <li>Web Storage</li>
+    <li>Geolocation</li>
+    <li>Drag & Drop</li>
+    <li>Indexed DB</li>
+    <li>Canvas</li>
+    <li>MatchMedia</li>
+    <li>etc..</li>
+  </ul>
+  <br>
+  <hr>
+  <br>
+  <h3>Manejo del DOM</h3>
+  <p id="que-es">
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem, laboriosam cum quod, perferendis eveniet pariatur
+    facere doloribus adipisci consequatur totam est dolorum vero nisi voluptate porro explicabo quo necessitatibus
+    blanditiis.
+  </p>
+  <nav id="menu">
+    <ul>
+      <li><a href="#">Sección 1</a></li>
+      <li><a href="#">Sección 2</a></li>
+      <li><a href="#">Sección 3</a></li>
+      <li><a href="#">Sección 4</a></li>
+      <li><a href="#">Sección 5</a></li>
+    </ul>
+  </nav>
+  <input type="text" name="nombre" placeholder="Nombre">
+<a href="" class="link-dom" data-id="1" data-descripcion="Document ObjetModel">DOM</a>
+  <section class="cards">
+    <figure class="card">
+      <img src="https://picsum.photos/200/300" alt="Tech">
+      <figcaption>Tech</figcaption>
+    </figure>
+    <figure class="card">
+      <img src="https://picsum.photos/200/300" alt="Animals">
+      <figcaption>Animals</figcaption>
+    </figure>
+    <figure class="card">
+      <img src="https://picsum.photos/200/300" alt="Architecture">
+      <figcaption>Architecture</figcaption>
+    </figure>
+    <figure class="card">
+      <img src="https://picsum.photos/200/300" alt="People">
+      <figcaption>People</figcaption>
+    </figure>
+    <figure class="card">
+      <img src="https://picsum.photos/200/300" alt="Nature">
+      <figcaption>Nature</figcaption>
+    </figure>
+  </section>
+  <script src="dom.js"></script>
+</body>
+
+</html>
