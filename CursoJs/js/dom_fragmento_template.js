@@ -61,8 +61,8 @@ console.log(cardContenido)
 //////////////////Delegacion de Eventos///////////////////
 document.addEventListener("click",e=>{
   console.log(`Click en `,e.target)
+  e.preventDefault();
   if(e.target.matches("#que-es")){
     alert("AJaaaa")
-    e.preventDefault();
   }
 })
