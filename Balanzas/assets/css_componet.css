@@ -1,7 +1,23 @@
+@import url(../css/style.css);
 .grid-fluid{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
     grid-gap: 15px;
     text-align: center;
+    text-align: justify;
+}
+.content-doc{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 1%;
+}
+.title_spn{
+    font-size: 1rem;
+    font-weight: bold;
+    color: var(--first-color);
+}
+.text_cnt{
+    width: 100%;
     text-align: justify;
 }
