@@ -66,3 +66,28 @@ document.addEventListener("click",e=>{
     alert("AJaaaa")
   }
 })
+//eventos y propiedades 77/// 
+window.addEventListener("resize", e => {  
+  console.log(window.innerWidth)
+  console.log(window.innerHeight)
+  console.log(window.outerHeight)
+  console.log(window.outerWidth)
+})
+window.addEventListener("scroll", e => {
+  console.log(window.scrollX)
+  console.log(window.scrollY)
+  console.log(e)
+  
+})
+
+window.addEventListener("load", e => {
+  console.log("Evento Load");
+  alert("Cargado")
+console.log(e)
+})
+
+document.addEventListener("DOMContentLoaded", e=>{
+  console.log("DOMContentLoaded");///  mejor de usar
+
+})
+//79
