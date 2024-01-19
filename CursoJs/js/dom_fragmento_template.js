@@ -90,4 +90,16 @@ document.addEventListener("DOMContentLoaded", e=>{
   console.log("DOMContentLoaded");///  mejor de usar
 
 })
-//79
+///Objetos de DOM///
+console.log(location)
+console.log(location.origin)
+console.log(location.protocol)
+console.log(location.host)
+console.log(location.hostname)
+console.log(location.port)
+console.log(location.href)
+console.log(location.pathname)
+console.log(location.hash)
+///HIstorial////
+console.log("///HIstorial////")
+console.log(history)
