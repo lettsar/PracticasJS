@@ -1,8 +1,0 @@
-Spanish Language Pack for Visual Studio Code
-Prettier - Code formatter
-Bracket Pair Colorizer
-EditorConfig for VS Code
-ESLint
-CSS Flexbox Cheatsheet
-
-
