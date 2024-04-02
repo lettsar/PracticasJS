@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Incluir HTML - Ajax</title>
+    <style>
+      html {
+        box-sizing: border-box;
+        font-family: sans-serif;
+        font-size: 16px;
+      }
+      body {
+        margin: 0;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+      }
+      *,
+      *::before,
+      *::after {
+        box-sizing: inherit;
+      }
+      img {
+        max-width: 100%;
+        height: auto;
+      }
+      main {
+        flex-grow: 1;
+      }
+      .conteiner {
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 992px;
+      }
+      .header {
+        padding: 5rem;
+        background-color: antiquewhite;
+      }
+      .header-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .logo img {
+        width: 5rem;
+        height: auto;
+      }
+      .menu {
+        display: flex;
+
+        justify-content: space-between;
+        font-size: 115%;
+      }
+      .menu a {
+        color: chocolate;
+        padding: 0 1vw;
+        transition: all 0.3s ease-in-out;
+      }
+      .menu a:hover {
+        opacity: 65;
+      }
+    </style>
+  </head>
+  <body>
+    <div data-include="/assets/header.html"></div>
+    <main class="container"></main>
+    <div data-include="/assets/footer.html"></div>
+    
+    
+    <script src="./js/include-html.js"></script>
+  </body>
+</html>
